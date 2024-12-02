@@ -200,7 +200,8 @@ class TodoListGUI:
                   command=self.complete_task,
                   style="Priority.TButton").pack(side='left', padx=5)
 
-        # Déplacer le compteur après les boutons
+        # Initialiser le compteur de tâches
+        self.task_counter = ttk.Label(self.main_frame, text="")
         self.task_counter.grid(row=3, column=0, columnspan=3, pady=10)
 
         self.refresh_task_list()
